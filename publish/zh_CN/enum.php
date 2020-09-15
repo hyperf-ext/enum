@@ -10,8 +10,8 @@ declare(strict_types=1);
  */
 return [
     'validation' => [
-        'enum' => 'The value you have provided is not a valid enum instance.',
-        'enum_value' => 'The value you have entered is invalid.',
-        'enum_key' => 'The key you have entered is invalid.',
+        'enum' => ':attribute 不是有效的枚举实例',
+        'enum_value' => ':attribute 不是有效的值',
+        'enum_key' => ':attribute 不是有效的键',
     ],
 ];

@@ -10,8 +10,8 @@ declare(strict_types=1);
  */
 return [
     'validation' => [
-        'enum' => 'The value you have provided is not a valid enum instance.',
-        'enum_value' => 'The value you have entered is invalid.',
-        'enum_key' => 'The key you have entered is invalid.',
+        'enum' => 'The :attribute is not a valid enum instance.',
+        'enum_value' => 'The :attribute is not a valid value.',
+        'enum_key' => 'The :attribute is not a valid key.',
     ],
 ];

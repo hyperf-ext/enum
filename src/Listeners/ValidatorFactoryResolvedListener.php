@@ -32,35 +32,22 @@ class ValidatorFactoryResolvedListener implements ListenerInterface
 
         $validatorFactory->extend('enum_key', function ($attribute, $value, $parameters, $validator) {
             $enum = $parameters[0] ?? null;
-            $enumKey = new EnumKey($enum);
-            $validator->setCustomMessages(['enum_key' => $enumKey->message()]);
-            return $enumKey->passes($attribute, $value);
+            return (new EnumKey($enum))->passes($attribute, $value);
         });
 
         $validatorFactory->extend('enum_value', function ($attribute, $value, $parameters, $validator) {
             $enum = $parameters[0] ?? null;
-
             $strict = $parameters[1] ?? null;
-
             if (! $strict) {
                 return (new EnumValue($enum))->passes($attribute, $value);
             }
-
             $strict = (bool) json_decode(strtolower($strict));
-
-            $enumValue = new EnumValue($enum, $strict);
-            $validator->setCustomMessages(['enum_value' => $enumValue->message()]);
-
-            return $enumValue->passes($attribute, $value);
+            return (new EnumValue($enum, $strict))->passes($attribute, $value);
         });
 
         $validatorFactory->extend('enum', function ($attribute, $value, $parameters, $validator) {
             $enum = $parameters[0] ?? null;
-
-            $enum = new Enum($enum);
-            $validator->setCustomMessages(['enum' => $enum->message()]);
-
-            return $enum->passes($attribute, $value);
+            return (new Enum($enum))->passes($attribute, $value);
         });
     }
 }

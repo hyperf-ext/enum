@@ -694,7 +694,7 @@ Enum::macro('asFlippedArray', function() {
 
 建议通过监听服务启动相关事件来注册宏。
 
-## PHPStan 整合
+## PHPStan 集成
 
 如果要使用 [PHPStan](https://github.com/phpstan/phpstan) 进行静态分析，可以启用扩展程序以正确识别魔术实例化方法。
 
@@ -826,7 +826,7 @@ UserType::asSelectArray(); // 返回 [0 => 'Administrator', 1 => 'Moderator', 2 
 返回被调用枚举的实例。进一步了解[枚举实例化](#实例化)。
 
 ``` php
-UserType::fromValue(UserType::Administrator); // 返回 instance of Enum with the value set to UserType::Administrator
+UserType::fromValue(UserType::Administrator); // 返回 UserType 的实例，该实例的值为 UserType::Administrator
 ```
 
 ### static getInstances(): array
