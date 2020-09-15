@@ -1,0 +1,65 @@
+{
+    "name": "hyperf-ext/enum",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf",
+        "enum"
+    ],
+    "description": "Simple, extensible and powerful enumeration implementation for Hyperf.",
+    "authors": [
+        {
+            "name": "Eric Zhu",
+            "email": "eric@zhu.email"
+        },
+        {
+            "name": "Ben Sampson",
+            "homepage": "https://sampo.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HyperfExt\\Enum\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\Enum\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "ext-swoole": ">=4.5",
+        "doctrine/dbal": "^2.10",
+        "hanneskod/classtools": "~1.0",
+        "hyperf/database": "^2.0",
+        "hyperf/di": "^2.0",
+        "hyperf/filesystem": "^2.0",
+        "hyperf/framework": "^2.0",
+        "hyperf/validation": "^2.0",
+        "laminas/laminas-code": "^3.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "hyperf/testing": "^2.0",
+        "phpstan/phpstan": "^0.12",
+        "swoole/ide-helper": "dev-master",
+        "mockery/mockery": "^1.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "co-phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 1024M -l 0 ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "HyperfExt\\Enum\\ConfigProvider"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<?php
+
+namespace HyperfTest\Enum\Models\Annotate;
+
+use HyperfExt\Enum\Traits\CastsEnums;
+use HyperfTest\Enum\Enums\UserType;
+use Hyperf\Database\Model\Model;
+
+/**
+ * @property \HyperfTest\Enum\Enums\UserType|null $user_type
+ */
+class Example extends Model
+{
+    use CastsEnums;
+
+    protected $enumCasts = [
+        'user_type' => UserType::class,
+    ];
+
+    protected $fillable = [
+        'user_type',
+    ];
+}

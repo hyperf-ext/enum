@@ -1,0 +1,15 @@
+<?php
+
+namespace HyperfTest\Enum\Enums\Annotate;
+
+use HyperfExt\Enum\Enum;
+
+/**
+ * @method static static Administrator()
+ * @method static static Moderator()
+ */
+final class AnnotateTestOneEnum extends Enum
+{
+    const Administrator = 'administrator';
+    const Moderator = 'moderator';
+}
