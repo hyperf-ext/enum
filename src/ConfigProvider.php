@@ -38,13 +38,13 @@ class ConfigProvider
             'publish' => [
                 [
                     'id' => 'zh_CN',
-                    'description' => 'The message bag for enum.',
+                    'description' => 'The message bag for hyperf-ext/enum.',
                     'source' => __DIR__ . '/../publish/zh_CN/enum.php',
                     'destination' => $languagesPath . '/zh_CN/enum.php',
                 ],
                 [
                     'id' => 'en',
-                    'description' => 'The message bag for enum.',
+                    'description' => 'The message bag for hyperf-ext/enum.',
                     'source' => __DIR__ . '/../publish/en/enum.php',
                     'destination' => $languagesPath . '/en/enum.php',
                 ],
